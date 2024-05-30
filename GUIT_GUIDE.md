@@ -1,5 +1,23 @@
 # Guia Básico de Uso do Git
 
+O primeiro passo é criar o ambiente virtual.
+
+## Usar um Ambiente Virtual
+
+Mesmo que o projeto já esteja em andamento, criar um ambiente virtual (`venv`)
+é recomendado.
+
+
+```bash
+python3 -m venv .env
+
+# Ativar o ambiente virtual
+# Windows
+.\env\Scripts\activate
+# macOS e Linux
+source .env/bin/activate
+
+```
 ## Configuração Inicial
 
 Antes de começar a usar o Git, configure seu nome de usuário e e-mail:
@@ -16,16 +34,22 @@ Para inicializar um repositório
 cd /caminho/para/seu/projeto
 git init
 ```
+## Criar um Repositório
+
+Entrar na sua conta GitHub, e criar um repositório. Para criar pastas vai em `new file > nome+pasta/` colocando a barra você cria um diretório e é obrigatório criar um arquivo, você pode criar um file.md vazio.
+
 ## Clonar um Repositório
 
-Para clonar um repositório existente, recomendo iniciar um projeto,
-criando antes de tudo, um repositório incial dentro do git, e então clonar
+Para clonar um repositório existente, recomendo iniciar um projeto
+criando, antes de tudo, um repositório incial dentro do GitHub, e então clonar
 e só aí dar andamento ao projeto, isso evita vários incovenientes.
 
 ```bash
 git clone https://github.com/usuario/repositorio.git
 cd repositorio
 ```
+Se estiver usando o VScode é apenas copiar e colar ` https://github.com/usuario/repositorio.git` que o VSCode faz o resto. Mas é importante fazer saber os comandos básicos status, add, commit, push e pull que seguem abaixo. Você poderá usar no própio terminar do VSCode.
+
 ## Verificar o Status do Repositório
 
 Para verificar o status do repositório:
@@ -137,6 +161,7 @@ Thumbs.db
 dist/
 build/
 ```
+
 
 ```bash
 git status
