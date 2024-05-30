@@ -7,9 +7,9 @@
 # Ignorar diretórios de dependências
 node_modules/
 vendor/
-env/
+venv/
 # Ignorar arquivos de configuração específicos do ambiente
-.env
+.venv
 
 # Ignorar arquivos do sistema
 .DS_Store
