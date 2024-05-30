@@ -87,7 +87,7 @@ code {
 
 iframe {
     width: 100%;
-    height: 100vh; /* Ajuste conforme necessário */
+    height: 50vh; /* Ajuste conforme necessário */
     border: none;
 }
 
