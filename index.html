@@ -1,12 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-BR">
+
 <head>
     <title>Meu Site no GitHub Pages</title>
-    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/themes/prism.min.css">  
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
-    <p>Este é o meu site no GitHub Pages.</p>
+    <header id="menu-container">
+    
+    </header>
+    <main class="container flex-fill">
+        <h1> Movimento de Uma Corpo</h1>
+   
+        A física é uma área que pensa muito sobre o porquê das coisas. 
+        Considera-se desde questões "simples" como o porquê os corpos
+        caem a mais abstratas que envolvem o mundo quântico.
+        Dito isso, quero trazer aqui como um corpo realiza um movimento 
+        bidimensional, ou seja, um movimento que ocorre pela composição 
+        de duas direções, p. ex., \(x\) e \(y\).
+    
+        O que pode nos remter a pensar sobre o caso do lançamento
+        de um corpo. E para realizar uma discussão bacana, vou começar 
+        considerando o movimento no
+        vácuo, sem fazer conta; e depois com a presença de um meio que
+        pode ser, por exemplo, o próprio ar. Note que podemos extender
+        isso para ser outros meios como a água ou a glicerina e muitos 
+        outros. Nessa caminhada quero mostrar que o "simples" movimento
+        de um corpo podem ficar interessante.
+    
+        <h2> Considerações Iniciais </h2>
+        <p>
+        Geralmente quando estudamos o movimento de um corpo na academia consideramos
+        que ele se move no vácuo, mas no mundo real, por sua vez, existe, na melhor das circunstância,
+        a presença do ar. Essa massa invisível que circunda o corpo
+        promove uma resistência ao movimento desse corpo; essa resistência
+        é um interação do corpo com o meio e depende da forma desse corpo, 
+        de propriedades do meio como viscosidade e densidade, as quais
+        variam com a pressão e temperatura. Essa resistência é também 
+        chamada de <em>força de arrasto</em>. Com isso, posso dizer,
+        que existe na prática uma interação externa ao corpo que sempre se opõe ao movimento. 
+        </p>
+        <p>
+        Impressionante não?! E parece super complicado. Uma galera super inteligente,
+        como Newton, Galileu, Reynolds,
+        usou muito do tempo deles pensado em como encontrar um jeito para lidar
+        com todos esses fatores, ou ao menos alguns deles, e em troca poderíamos
+        saber estimar coisas como: qual a velocidade que precisamos jogar algo para 
+        cima para que isso alcance uma altura máxima. O ser humano usou/usa isso
+        para diversas finalidades como, p. ex., melhorar a aerodinâmica de um veículo.
+        </p>
+        <p>
+        E agora podemos discutir um pouco sobre esse tema, para isso, peço que
+        considere um corpo movendo-se na horizontal sem a presença
+        de qualquer interação (força) externa que impeça ou favoreça
+        esse movimento. Temos, nessa circunstância, o movimento basicão
+        em linha reta, sem qualquer mudança na velocidade, seja no seu
+        módulo ou na sua direção... um verdadeiro marasmo. Essa situação
+        imaginada é considerar que o corpo está se movendo no vácuo.
+        </p>
+        <p>
+        E como seria se consideramos a presença do meio, como os cientistas
+        resolveram isso? Nesse caso vou precisar de mais que algumas poucas 
+        palavras, vou começar usando a Lei Fundamental - a segunda 
+        Lei de Newton - \(\sum{\vec{F}} = m \vec{a}\)
+        </p>
+        
+        \begin{equation}\label{eq:Newton'sLaw-X}
+        m \vec{a} = -f(v) \hat{v}
+        \end{equation}
+        
+        <p>
+        Onde \(m\) é a massa do corpo, \(\vec{a}\) é a aceleração, \(f(v)\) 
+        é valor da resistência, o qual
+        depende da velocidade do corpo e \(\hat{v}\) é o versor, ou seja, um
+        vetor unitário que indica a direção positiva da velocidade. 
+        Incrível, não?! Com a Equação \ref{eq:Newton'sLaw-X}, nós conseguimos
+        quantificar a resistência que o meio promove ao movimento. Você pode
+        estar pensando, mas qual é o jeitão de \(f(v)\)? Sem demora, é:
+        </p>
+        \begin{equation}\label{eq:f(v)}
+        f(v) = b v + c v^{2}
+        \end{equation}
+        <p>
+        Onde \(b\) e \(c\) são constantes que carregam em si as informações
+        do meio, como densidade e vicosidade, assim como a forma do corpo. Note
+        como a equação\ref{eq:f(v)} é simples, elegante e engenhosa.
+        </p>
+        <p>
+        Outra característica que devemos notar, agora olhadando para a Eq. \ref{eq:Newton'sLaw-X}, é o 
+        sinal negativo, ele é colocado para indicar que a força de arrasto está sempre no sentido
+        contrária à velocidade, ou seja, se o corpo está indo para a direita a
+        resistência será para a esquerda, promovendo assim uma dificultade à evolução
+        da velocidade. Outra informação muito sutil, mas super relevante, é que se o
+        corpo pára (\(v = 0 \textrm{ m/s}\)) a resitência some. 
+        </p>
+        <p>
+        Agora vamos voltar nossa atenção para a Eq.\ref{eq:f(v)}, ela "esconde", algumas
+        informações importantes. Os parâmetros \(b\) e \(c\) podem definir se o termo linear ou o quadrático
+        irá dominar. O que ganhamos em saber isso? Se uma delas domina, podemos considerar
+        apenas uma dos termos na hora de analisar um movimento, o arrasto linear, ou o arrasto quadrático.
+        </p>
+        <p>
+        E como podemos fazer isso? Analisando a razão entre os termos, se a razão for muito maior que 1,
+        signica que vamos considerar o termo quadrático, no caso contrário vamos considerar apenas o termo
+        linear. E se muito próximo ou igual a 1 teremos que considerar os dois termos.
+        </p>
+        \begin{equation}
+        \begin{cases}
+        \dfrac{f_{quad}}{f_{lin}} >> 1 \quad \textrm{domínio do termo quadrático}\\
+        \dfrac{f_{quad}}{f_{lin}} << 1 \quad \textrm{domínio do termo linear}\\
+        \dfrac{f_{quad}}{f_{lin}} = 1 \quad \textrm{empate}
+        \end{cases}
+        \end{equation}
+        <p> 
+        Vamos tratar aqui nesse texto situações que iremos considera apenas o arrasto linear e outra considerando apenas
+        o arrasto quadrático. Vou precisar também fazer algumas resistrinções para assim focarmos mais na física
+        do que na contalhada e a primeira restrição é que corpo a ser analisado será sempre uma esfera.
+        </p>
+
+    </main>  
+    
+    <div id="footer-container"></div>
+
     <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+    
+    <!-- Mathjax que permite escrever usando LaTeX -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+    tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    processEscapes: true},
+    jax: ["input/TeX","input/MathML","input/AsciiMath","output/CommonHTML"],
+    extensions: ["tex2jax.js","mml2jax.js","asciimath2jax.js","MathMenu.js","MathZoom.js","AssistiveMML.js", "[Contrib]/a11y/accessibility-menu.js"],
+    TeX: {
+    extensions: ["AMSmath.js","AMSsymbols.js","noErrors.js","noUndefined.js"],
+    equationNumbers: {
+    autoNumber: "AMS"
+    }
+    }
+    });
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.25.0/components/prism-python.min.js"></script>
+
 </body>
-</html>
+
+
